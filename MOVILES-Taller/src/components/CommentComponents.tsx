@@ -7,7 +7,6 @@ import { styles } from '../theme/appStyles';
 // Definir la interfaz del comentario
 export interface Comment {
   id: string;
-  author: string;
   comment: string;
 }
 
@@ -18,9 +17,6 @@ interface Props {
 export const CommentComponent = ({ comment }: Props) => {
   return (
     <View style={styles.commentItem}>
-      <Text variant="labelMedium" style={styles.commentAuthor}>
-        {comment.author}
-      </Text>
       <Text variant="bodyMedium" style={styles.commentText}>
         {comment.comment}
       </Text>

@@ -300,13 +300,13 @@ export const JuegoScreen = () => {
                 <Text variant="headlineSmall" style={{ fontWeight: 'bold' }}>Comentarios</Text>
               <IconButton icon="close" onPress={() => setShowAllComments(false)} />
             </View>
-            <Divider />
+            <Divider bold={true} />
             {/* Lista de comentarios */}
-            <FlatList 
-              data={comments} 
-              contentContainerStyle={{ paddingHorizontal: 10, paddingVertical: 15 }}
-              renderItem={({ item }) => <CommentComponent comment={item} />} 
-              keyExtractor={(item) => item.id} 
+           <FlatList
+              data={comments}
+              renderItem={({ item }) => <CommentComponent comment={item} />}
+              keyExtractor={(item) => item.id}
+              contentContainerStyle={{ padding: 16 }}
               showsVerticalScrollIndicator={false}
             />
           </Modal>
